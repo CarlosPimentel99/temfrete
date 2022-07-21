@@ -1,139 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Faça seu login para continuar no seu painel de controle!">
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="screen"/>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link rel="icon" type="image/x-icon" href="img/icons/favicon.svg">
+</head>
+<body class="login-tela-fundo">
+        <section class="login-conteudo">
+            <h3 class="login-conteudo-titulo vermelho"><strong>Faça seu login para prosseguir!</strong></h3>
+            <form class="login-formulario" action="valida_login.php" method="POST">
 
-
-<html>
-
-  <head>
-
-    <meta charset="utf-8" />
-
-    <title>Login administrador</title>
-
-
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-    <style>
-
-      .card-login {
-
-        padding: 30px 0 0 0;
-
-        width: 350px;
-
-        margin: 0 auto;
-
-      }
-
-    </style>
-
-  </head>
-
-
-
-  <body>
-
-
-
-    <nav class="navbar navbar-dark bg-dark">
-
-      <a class="navbar-brand" href="home_adm.php">
-
-        <img src="img/temfrete.png" width="30" height="30" class="d-inline-block align-top" alt="">
-
-        Login Administrador
-
-      </a>
-
-    </nav>
-
-
-
-    <div class="container">    
-
-      <div class="row">
-
-
-
-        <div class="card-login">
-
-          <div class="card">
-
-            <div class="card-header">
-
-              Login
-
-            </div>
-
-            <div class="card-body">
-
-              <form action="valida_login.php" method="POST">
-
-                <div class="form-group">
-
-                  <input name="email" type="email" class="form-control" placeholder="E-mail">
-
+                <div class="login-formulario-barra">
+                    <img class="icone" alt="email" src="img/icons/email.svg">
+                    <input class="login-conteudo-input cinza" type="email" placeholder="E-mail" name="email" required>
+                </div>
+                
+                <div class="login-formulario-barra">
+                    <img class="icone" alt="senha" src="img/icons/senha.svg">
+                    <input class="login-conteudo-input cinza" type="password" placeholder="Senha" name="senha" required>
                 </div>
 
-                <div class="form-group">
-
-                  <input name="senha" type="password" class="form-control" placeholder="Senha">
-
+                <div class="login-formulario-barra">
+                    <button class="login-formulario-botao branco" type="submit">
+                        <img class="icone" alt="login" src="img/icons/login.svg">
+                        LOGIN</button>
                 </div>
-
-
 
                 <?php 
-
                   if(isset($_GET['login']) && $_GET['login'] == 'erro') {
-
                 ?>
-
-
-
-                <div class="text-danger">
-
-                  Usuário ou senha inválido(s)
-
-                </div>
-
+                  <div class="vermelho centralizado">
+                    Usuário ou senha inválido(s)
+                  </div>
                  <?php } ?>
-
-
-
-
-
                  <?php 
-
                   if(isset($_GET['login']) && $_GET['login'] == 'erro2') {
-
                 ?>
+                  <div class="vermelho centralizado">
+                    Faça o Login antes de acessar as paginas protegidas!!!
+                  </div>
+                <?php } ?>
 
-
-
-                <div class="text-danger">
-
-                  Faça o Login antes de acessar as paginas protegidas!!!
-
-                </div>
-
-                 <?php } ?>
-
-                
-
-
-
-                <button class="btn btn-lg btn-info btn-block" type="submit">Entrar</button>
-
-              </form>
-
-            </div>
-
-          </div>
-
-        </div>
-
-    </div>
-
-  </body>
-
+            </form>
+        </section>
+</body>
 </html>

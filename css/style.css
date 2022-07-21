@@ -147,7 +147,7 @@ button.red{
 /*login page*/
 
 .login-tela-fundo{
-    background-image: url("img/tela-de-fundo.png");
+    background-image: url("../img/tela-de-fundo.png");
     background-size: cover;
     width: 100vw;
     height: 100vh;
@@ -337,6 +337,12 @@ button.red{
     display: flex;
     flex-direction: row-reverse;
     gap: 10px;
+}
+
+.centralizado{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /*políticas de privacidade*/
