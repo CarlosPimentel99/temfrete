@@ -1,0 +1,452 @@
+/*resetando configuracoes*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Poppins';
+    border: none;
+}
+
+body{
+    font-size: 100%;
+}
+
+/*cabecalho*/
+
+.cabecalho-cor{
+    background: linear-gradient(180deg, #A23E48 0%, #DF4B48 100%);
+}
+
+.cabecalho{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 24px;
+}
+
+.cabecalho-menu{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.cabecalho-item-principal{
+    font-weight: 600;
+}
+
+.cabecalho-item{
+    color: #FFFFFF;
+    font-weight: 300;
+}
+
+.cabecalho-item-icone{
+    max-width: 20px;
+}
+
+button.red{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    text-align: center;
+    color: #FFFFFF;
+    border: none;
+    padding: 20px 40px;
+    background: rgba(255, 60, 56, 0.5);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+.cabecalho-conteudo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 24px;
+}
+
+.cabecalho-conteudo-escrito{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 100px;
+}
+
+.cabecalho-conteudo-escrito-titulo{
+    font-weight: 500;
+    font-size: 20px;
+    max-width: 550px;
+}
+
+.cabecalho-conteudo-escrito-subtitulo{
+    font-weight: 100;
+    font-size: 16px;
+    max-width: 550px;
+}
+
+.cabecalho-conteudo-imagem{    
+    max-width: 500px;
+    padding-top: 170px;
+}
+
+/*conteudo*/
+
+.conteudo{
+    display: flex;
+    flex-direction: row;
+    padding: 60px;
+    padding-left: 200px;
+    padding-right: 200px;
+    gap: 200px;
+}
+
+.conteudo-caixa{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 300px;
+    width: 400px;
+    padding: 40px;
+    gap: 20px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 20px rgba(162, 62, 72, 0.1);
+    border-radius: 5px;
+}
+
+.conteudo-caixa-titulo{
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.conteudo-caixa-subtitulo{
+    font-weight: 100;
+    font-size: 16px;
+}
+
+.conteudo-caixa-icone{
+    max-width: 40px;
+}
+
+/*rodapé*/
+
+.rodape-cor{
+    background: linear-gradient(360deg, #A23E48 0%, #DF4B48 100%);
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding: 50px;
+    align-items: center;
+}
+
+.rodape-conteudo-icone{
+    max-width: 30px;
+}
+
+/*login page*/
+
+.login-tela-fundo{
+    background-image: url("img/tela-de-fundo.png");
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-conteudo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #F5F6FA;
+    width: 400px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.login-conteudo-titulo{
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+.login-formulario-barra{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-formulario{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-top: 0px;
+    padding: 30px;
+    padding-bottom: 60px;
+    gap: 50px;
+}
+
+.login-conteudo-input{
+    width: 100%;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 8px;
+    transition-duration: 0.5s;
+}
+
+.login-formulario-botao{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    text-align: center;
+    width: 50%;
+    color: #FFFFFF;
+    padding: 20px 40px;
+    background: #DF4B48;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    cursor: pointer;
+    transition-duration: 0.5s;
+}
+
+.login-formulario-botao:hover{
+    box-shadow: 0px 0px 20px rgba(162, 62, 72, 0.4);
+    transition-duration: 0.5s;
+}
+
+.login-conteudo-input:focus{
+    outline: none;
+    box-shadow: 0px 0px 20px rgba(162, 62, 72, 0.4);
+    transition-duration: 0.5s;
+}
+
+.icone{
+    max-width: 25px;
+}
+
+/*area do cliente*/
+
+.logado-tela-fundo{
+    background-image: url("img/tela-de-fundo-default.png");
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+}
+
+.conteudo-logado{
+    display: flex;
+    flex-direction: row;
+    padding: 60px;
+    padding-left: 200px;
+    padding-right: 200px;
+    gap: 200px;
+}
+
+.conteudo-caixa-principal{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 300px;
+    width: 800px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 20px rgba(162, 62, 72, 0.1);
+    border-radius: 5px;
+}
+
+.conteudo-caixa-principal-texto{
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    gap: 20px;
+    width: 400px;
+}
+
+.conteudo-caixa-secundaria{
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    width: 400px;
+    padding: 40px;
+    gap: 20px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 20px rgba(162, 62, 72, 0.1);
+    border-radius: 5px;
+}
+
+.conteudo-caixa-botao{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+/*novo frete*/
+.novo-frete{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+}
+
+.novo-frete-conteudo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #F5F6FA;
+    width: 800px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+/*consultar fretes*/
+.conteudo-caixa-consultar-frete{
+    display: flex;
+    flex-direction: column;
+    width: 440px;
+    padding: 35px;
+    gap: 10px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 20px rgba(162, 62, 72, 0.1);
+    border-radius: 5px;
+}
+
+.conteudo-caixa-consultar-frete-linha{
+    display: flex;
+    flex-direction: column;
+}
+
+.conteudo-caixa-consultar-frete-texto{
+    font-weight: 100;
+    font-size: 15px;
+}
+
+.conteudo-caixa-consultar-frete-imagem{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.conteudo-caixa-consultar-status-frete{
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 10px;
+}
+
+/*políticas de privacidade*/
+.banner{
+    width: 100%;
+    max-height: 50vh;
+}
+
+.conteudo-politicas-privacidade{
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+    justify-content: space-between;
+    padding: 40px 200px 50px 200px;
+    text-align: justify;
+}
+
+ul{
+    padding-left: 55px;
+}
+
+.conteudo-politicas-privacidade p, ul {
+    color: #6C757D;
+}
+
+
+
+/*cores fixas.*/
+.vermelho{
+    color: #DF4B48;
+}
+
+.laranja{
+    color: #FF8030;
+}
+
+.branco{
+    color: #FFFFFF;
+}
+
+.preto{
+    color: #1D253B;
+}
+
+.cinza{
+    color: #6C757D;
+}
+
+.botao-vermelho{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    text-align: center;
+    color: #FFFFFF;
+    border: none;
+    padding: 20px 40px;
+    background: #DF4B48;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    transition-duration: 0.5s;
+}
+
+.botao-vermelho:hover{
+    box-shadow: 0px 0px 20px rgba(162, 62, 72, 0.4);
+    transition-duration: 0.5s;
+}
+
+.botao-preto{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    text-align: center;
+    color: #FFFFFF;
+    border: none;
+    padding: 20px 40px;
+    background: #1D253B;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    transition-duration: 0.5s;
+}
+
+.botao-preto:hover{
+    box-shadow: 0px 0px 20px rgba(162, 62, 72, 0.4);
+    transition-duration: 0.5s;
+}
+
+.botao-laranja{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    text-align: center;
+    color: #FFFFFF;
+    border: none;
+    padding: 20px 40px;
+    background: #FF8030;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    transition-duration: 0.5s;
+}
+
+.botao-laranja:hover{
+    box-shadow: 0px 0px 20px rgba(162, 62, 72, 0.4);
+    transition-duration: 0.5s;
+}
+
+h3{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
