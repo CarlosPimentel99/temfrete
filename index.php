@@ -1,141 +1,62 @@
-
-
-<html>
-
-  <head>
-
-    <meta charset="utf-8" />
-
-    <title>Login administrador</title>
-
-
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-
-
-    <style>
-
-      .card-login {
-
-        padding: 30px 0 0 0;
-
-        width: 350px;
-
-        margin: 0 auto;
-
-      }
-
-    </style>
-
-  </head>
-
-
-
-  <body>
-
-
-
-    <nav class="navbar navbar-dark bg-dark">
-
-      <a class="navbar-brand" href="home_adm.php">
-
-        <img src="img/temfrete.png" width="30" height="30" class="d-inline-block align-top" alt="">
-
-        Login Administrador
-
-      </a>
-
-    </nav>
-
-
-
-    <div class="container">    
-
-      <div class="row">
-
-
-
-        <div class="card-login">
-
-          <div class="card">
-
-            <div class="card-header">
-
-              Login
-
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="O melhor aplicativo de fretes do mundo!">
+    <title>Tem Frete</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="screen"/>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link rel="icon" type="image/x-icon" href="img/icons/favicon.svg">
+</head>
+<body>
+    <main>
+    <div class="cabecalho-cor">
+        <header class="cabecalho">
+            <div class="cabecalho-item-principal">
+            <h1 class="branco">TEM FRETE</h1>
             </div>
+            <nav class="cabecalho-menu">
+                <a class="cabecalho-item" href="#">Home</a>
+                <a class="cabecalho-item" href="#">Download</a>
+                <a class="cabecalho-item" href="login.php"><button class="red"><img class="cabecalho-item-icone" alt="login" src="img/icons/login.svg">LOGIN</button></a>
+            </nav>
+        </header>
 
-            <div class="card-body">
-
-              <form action="valida_login.php" method="POST">
-
-                <div class="form-group">
-
-                  <input name="email" type="email" class="form-control" placeholder="E-mail">
-
-                </div>
-
-                <div class="form-group">
-
-                  <input name="senha" type="password" class="form-control" placeholder="Senha">
-
-                </div>
-
-
-
-                <?php 
-
-                  if(isset($_GET['login']) && $_GET['login'] == 'erro') {
-
-                ?>
-
-
-
-                <div class="text-danger">
-
-                  Usuário ou senha inválido(s)
-
-                </div>
-
-                 <?php } ?>
-
-
-
-
-
-                 <?php 
-
-                  if(isset($_GET['login']) && $_GET['login'] == 'erro2') {
-
-                ?>
-
-
-
-                <div class="text-danger">
-
-                  Faça o Login antes de acessar as paginas protegidas!!!
-
-                </div>
-
-                 <?php } ?>
-
-                
-
-
-
-                <button class="btn btn-lg btn-info btn-block" type="submit">Entrar</button>
-
-              </form>
-
+        <section class="cabecalho-conteudo">
+            <div class="cabecalho-conteudo-escrito">
+                <h2 class="cabecalho-conteudo-escrito-titulo branco"> Procurando alguma plataforma para fazer frete?</h2>
+                <h2 class="cabecalho-conteudo-escrito-subtitulo branco"> Nós temos a solução que você busca! Aqui em nossa plataforma você está no controle de tudo desde em qual carga escolher e até falar diretamente com o responsável da logística.</p>
             </div>
-
-          </div>
-
-        </div>
-
+            <img class="cabecalho-conteudo-imagem" alt="Imagem do aplicativo mobile" src="img/mockup.svg">
+        </section>
     </div>
+        <section class="conteudo">
+            <div class="conteudo-caixa">
+                <img class="conteudo-caixa-icone" alt="segurança do app" src="img/icons/seguranca.svg">
+                <h3 class="conteudo-caixa-titulo vermelho">Segurança</h3>
+                <h4 class="conteudo-caixa-subtitulo cinza">Em nossa plataforma todos os seus dados estão seguros!</h4>
+            </div>
 
-  </body>
+            <div class="conteudo-caixa">
+                <img class="conteudo-caixa-icone" alt="segurança do app" src="img/icons/seguranca.svg">
+                <h3 class="conteudo-caixa-titulo vermelho">Praticidade</h3>
+                <h4 class="conteudo-caixa-subtitulo cinza">Tudo de maneira fácil e intuitiva para você!</h4>
+            </div>
 
+            <div class="conteudo-caixa">
+                <img class="conteudo-caixa-icone" alt="segurança do app" src="img/icons/seguranca.svg">
+                <h3 class="conteudo-caixa-titulo vermelho">Agilidade</h3>
+                <h4 class="conteudo-caixa-subtitulo cinza">Facilidade na busca de cargas e agendamento direto com um representante</h4>
+            </div>
+        </section>
+        
+        <section class="rodape-cor">
+            <p class="rodape-conteudo branco">Nós estamos na PlayStore, faça seu download agora mesmo!</p>
+            <a href="https://play.google.com/store/apps/details?id=com.temfretecarga"><button class="red"><img class="rodape-conteudo-icone" alt="playstore" src="img/icons/playstore.svg">DOWNLOAD</button></a>
+        </section>
+    </main>
+</div>
+</body>
 </html>
