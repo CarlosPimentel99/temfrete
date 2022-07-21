@@ -232,7 +232,7 @@ button.red{
 /*area do cliente*/
 
 .logado-tela-fundo{
-    background-image: url("img/tela-de-fundo-default.png");
+    background-image: url("../img/tela-de-fundo-default.png");
     background-size: cover;
     width: 100vw;
     height: 100vh;
@@ -245,7 +245,8 @@ button.red{
     padding: 60px;
     padding-left: 200px;
     padding-right: 200px;
-    gap: 200px;
+    gap: 10%;
+    justify-content: center;
 }
 
 .conteudo-caixa-principal{
