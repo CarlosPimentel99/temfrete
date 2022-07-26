@@ -27,11 +27,11 @@
     </header>
 
     <div class="novo-frete">
-      <?php if(isset($_GET['inclusao']) && $_GET['inclusao'] == 1 ) { ?>
+      <!-- <?php if(isset($_GET['inclusao']) && $_GET['inclusao'] == 1 ) { ?>
         <div class="bg-success pt-2 text-white d-flex justify-content-center">
           <h5>Carga inserida com sucesso!</h5>
         </div>
-      <?php } ?>
+      <?php } ?> --> 
     
       <section class="novo-frete-conteudo">
         <h3 class="login-conteudo-titulo vermelho"><strong>Digite todas as informações para cadastrar um novo frete!</strong></h3>
@@ -76,6 +76,20 @@
                 <input class="login-conteudo-input cinza" type="text" placeholder="Valor do frete R$" name="valor" required>
             </div>
 
+            <?php 
+                if(isset($_GET['inclusao']) && $_GET['inclusao'] == 1 ) { 
+                ?>            
+                <div class="verde centralizado">
+                    <h5>Carga inserida com sucesso!</h5>
+                </div>
+            <?php } 
+                elseif(isset($_GET['inclusao']) && $_GET['inclusao'] != 1 ) {
+                ?>
+                <div class="vermelho centralizado">
+                    <h5>Erro ao inserir carga! </h5>                               
+                </div>
+            <?php } ?>
+            
             <div class="login-formulario-barra">
                 <a href="home_adm.php">
                 <button class="botao-vermelho branco" type="button">
