@@ -22,7 +22,7 @@
         <h1 class="branco">TEM FRETE</h1>
         </div>
         <nav class="cabecalho-menu">
-            <a class="cabecalho-item" href=""><button class="red"><img class="cabecalho-item-icone" alt="logout" src="img/icons/logout.svg">SAIR</button></a>
+            <a class="cabecalho-item"  href="logoff.php"><button class="red"><img class="cabecalho-item-icone" alt="logout" src="img/icons/logout.svg">SAIR</button></a>
         </nav>
     </header>
 
@@ -39,12 +39,11 @@
 
             <div class="login-formulario-barra">
                 <img class="icone" alt="Título do frete" src="img/icons/titulo-frete.svg">
-                <input class="login-conteudo-input cinza" type="text" placeholder="Título do frete" name="titulo-frete" required>
+                <input class="login-conteudo-input cinza" type="text" placeholder="Título do frete" name="titulo" required>
             </div>
             
             <div class="login-formulario-barra">
-                <img class="icone" alt="Tipo do caminhao" src="img/icons/tipo-caminhao.svg">
-                <!-- <input class="login-conteudo-input cinza" type="text" placeholder="Tipo de caminhão" name="tipo-caminhao" required> -->
+                <img class="icone" alt="Tipo do caminhao" src="img/icons/tipo-caminhao.svg">                
                 <select name="tp_caminhao" class="login-conteudo-input cinza">
                   <option value="" disabled selected>Tipo do caminhão</option>
                   <option value="3/4">3/4</option>
@@ -59,26 +58,26 @@
 
             <div class="login-formulario-barra">
                 <img class="icone" alt="Peso da carga" src="img/icons/peso-carga.svg">
-                <input class="login-conteudo-input cinza" type="text" placeholder="Peso da carga" name="peso-carga" required>
+                <input class="login-conteudo-input cinza" type="text" placeholder="Peso da carga" name="peso_carga" required>
             </div>
 
             <div class="login-formulario-barra">
                 <img class="icone" alt="Local coleta" src="img/icons/local-coleta.svg">
-                <input class="login-conteudo-input cinza" type="text" placeholder="Local de coleta, ex: endereço, número, bairro, cidade e estado" name="local-coleta" required>
+                <input class="login-conteudo-input cinza" type="text" placeholder="Local de coleta, ex: endereço, número, bairro, cidade e estado" name="local_coleta" required>
             </div>
 
             <div class="login-formulario-barra">
                 <img class="icone" alt="Local destino" src="img/icons/local-destino.svg">
-                <input class="login-conteudo-input cinza" type="text" placeholder="Local do destino, ex: endereço, número, bairro, cidade e estado" name="local-destino" required>
+                <input class="login-conteudo-input cinza" type="text" placeholder="Local do destino, ex: endereço, número, bairro, cidade e estado" name="local_entrega" required>
             </div>
 
             <div class="login-formulario-barra">
                 <img class="icone" alt="Valor do frete" src="img/icons/valor-frete.svg">
-                <input class="login-conteudo-input cinza" type="text" placeholder="Valor do frete R$" name="valor-frete" required>
+                <input class="login-conteudo-input cinza" type="text" placeholder="Valor do frete R$" name="valor" required>
             </div>
 
             <div class="login-formulario-barra">
-                <a href="logado.html">
+                <a href="home_adm.php">
                 <button class="botao-vermelho branco" type="button">
                     <img class="icone" alt="voltar" src="img/icons/voltar.svg">
                     VOLTAR</button>
