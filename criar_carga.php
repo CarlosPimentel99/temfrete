@@ -45,7 +45,8 @@
             <div class="login-formulario-barra">
                 <img class="icone" alt="Tipo do caminhao" src="img/icons/tipo-caminhao.svg">
                 <!-- <input class="login-conteudo-input cinza" type="text" placeholder="Tipo de caminhão" name="tipo-caminhao" required> -->
-                <select name="tp_caminhao" class="login-conteudo-input cinza" placeholder="Tipo">
+                <select name="tp_caminhao" class="login-conteudo-input cinza">
+                  <option value="" disabled selected>Tipo do caminhão</option>
                   <option value="3/4">3/4</option>
                   <option value="TOCO">TOCO</option>
                   <option value="TRUCK">TRUCK</option>

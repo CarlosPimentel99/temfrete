@@ -306,6 +306,10 @@ button.red{
     border-radius: 5px;
 }
 
+option[value=""][disabled] {
+    display: none;
+}
+
 /*consultar fretes*/
 .conteudo-caixa-consultar-frete{
     display: flex;
