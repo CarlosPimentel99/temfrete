@@ -32,7 +32,7 @@
                 <div class="conteudo-caixa-principal-texto">
                     <h3 class="conteudo-caixa-titulo vermelho">
                         <img class="conteudo-caixa-icone" alt="novo frete" src="img/icons/novo-grande.svg">
-                        Novo frete</h3>
+                        Novo fretee</h3>
                     <h4 class="conteudo-caixa-subtitulo cinza">Para que um novo frete seja disponibilizado, basta cadastra-lo abaixo.</h4>
                     <div class="conteudo-caixa-botao">
                         <a href="criar_carga.php"><button class="botao-vermelho"><img class="icone" alt="consultar motoristas" src="img/icons/novo.svg">NOVO</button></a>
