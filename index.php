@@ -13,7 +13,23 @@
 <body>
     <main>
     <div class="cabecalho-cor">
+            
+
         <header class="cabecalho">
+            <div class="menu-mobile">
+                <div id="myNav" class="overlay">
+                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                        <div class="overlay-content">
+                            <a href="#">Home</a>
+                            <a href="#">Download</a>
+                            <a href="login.php">LOGIN</a>
+                        </div>
+                    </div>
+                        <button class="botao-menu red" onclick="openNav()">
+                            <span >&#9776;</span>
+                        </button>
+            </div>
+
             <div class="cabecalho-item-principal">
             <h1 class="branco">TEM FRETE</h1>
             </div>
@@ -58,5 +74,14 @@
         </section>
     </main>
 </div>
+<script>
+function openNav() {
+  document.getElementById("myNav").style.height = "100%";
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.height = "0%";
+}
+</script>
 </body>
 </html>
