@@ -30,7 +30,7 @@
 <body class="logado-tela-fundo">
     <header class="cabecalho">
         <div class="cabecalho-item-principal">
-        <h1 class="branco">TEM FRETE</h1>
+        <a href="home_adm.php"><h1 class="branco">TEM FRETE</h1></a>
         </div>
         <nav class="cabecalho-menu">
           <a class="cabecalho-item"  href="logoff.php"><button class="red"><img class="cabecalho-item-icone" alt="logout" src="img/icons/logout.svg">SAIR</button></a>
