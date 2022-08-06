@@ -60,8 +60,8 @@
       <?php if($frete->status == 1) { ?>
         <div class="conteudo-caixa-consultar-frete">
 
-            <div class="conteudo-caixa-consultar-status-frete" onclick="inativar(<?= $frete->id_frete ?>)">
-                <img class="icone" src="img/icons/status-ativo.svg">
+            <div class="conteudo-caixa-consultar-status-frete">
+                <img class="icone" src="img/icons/status-ativo.svg" onclick="inativar(<?= $frete->id_frete ?>)">
                 <p class="preto">ATIVO</p>
             </div>
 
@@ -131,10 +131,10 @@
       <?php } ?>
 
       <?php if($frete->status == 2) { ?>
-        <div class="conteudo-caixa-consultar-frete"  onclick="ativar(<?= $frete->id_frete ?>)">
+        <div class="conteudo-caixa-consultar-frete">
             <div class="conteudo-caixa-consultar-status-frete">
-                <img class="icone" src="img/icons/status-inativo.svg">              
-                  <p class="laranja">INATIVO</p>
+                <img class="icone" src="img/icons/status-inativo.svg" onclick="ativar(<?= $frete->id_frete ?>)">
+                <p class="laranja" >INATIVO</p>
             </div>
 
             <div class="conteudo-caixa-consultar-frete-linha">
