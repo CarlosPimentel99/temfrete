@@ -38,13 +38,15 @@
     </header>
 
     <?php if( isset($_GET['msg']) && $_GET['msg'] == 'sucesso' ) { ?>
-      <div class="bg-success pt-2 text-white d-flex justify-content-center">
-        <h5>Processo executado com Sucesso!!!</h5>
+      <div class="alert success branco">
+          <span class="closebtn">&times;</span>  
+          <strong>Sucesso!</strong> Processo executado perfeitamente!
       </div>
     <?php } ?>
     <?php if( isset($_GET['msg']) && $_GET['msg'] == 'erro' ) { ?>
-      <div class="bg-danger pt-2 text-white d-flex justify-content-center">
-        <h5>Problemas ao executar processo!!!</h5>
+      <div class="alert error branco">
+          <span class="closebtn">&times;</span>  
+          <strong>Erro!</strong> Problemas ao executar o processo!
       </div>
     <?php } ?>
 
@@ -61,8 +63,8 @@
         <div class="conteudo-caixa-consultar-frete">
 
             <div class="conteudo-caixa-consultar-status-frete" onclick="inativar(<?= $frete->id_frete ?>)">
-                <img class="icone" src="img/icons/status-ativo.svg">
-                <p class="preto">ATIVO</p>
+                  <img class="icone" src="img/icons/status-ativo.svg">
+                  <p class="preto">ATIVO</p>
             </div>
 
             <div class="conteudo-caixa-consultar-frete-linha">
@@ -210,5 +212,18 @@
         <?php $contador =0; ?>            
       <?php } ?>
     <?php } ?>
-</body>
+
+    <script>
+      var close = document.getElementsByClassName("closebtn");
+      var i;
+
+      for (i = 0; i < close.length; i++) {
+        close[i].onclick = function(){
+          var div = this.parentElement;
+          div.style.opacity = "0";
+          setTimeout(function(){ div.style.display = "none"; }, 600);
+        }
+      }
+  </script>
+  </body>
 </html>
