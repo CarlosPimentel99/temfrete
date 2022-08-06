@@ -30,7 +30,7 @@
 <body class="logado-tela-fundo">
     <header class="cabecalho">
         <div class="cabecalho-item-principal">
-        <h1 class="branco">TEM FRETE</h1>
+        <a href="home_adm.php"><h1 class="branco">TEM FRETE</h1></a>
         </div>
         <nav class="cabecalho-menu">
           <a class="cabecalho-item"  href="logoff.php"><button class="red"><img class="cabecalho-item-icone" alt="logout" src="img/icons/logout.svg">SAIR</button></a>
@@ -62,9 +62,9 @@
       <?php if($frete->status == 1) { ?>
         <div class="conteudo-caixa-consultar-frete">
 
-            <div class="conteudo-caixa-consultar-status-frete" onclick="inativar(<?= $frete->id_frete ?>)">
-                  <img class="icone" src="img/icons/status-ativo.svg">
-                  <p class="preto">ATIVO</p>
+            <div class="conteudo-caixa-consultar-status-frete">
+                <img class="icone" src="img/icons/status-ativo.svg" onclick="inativar(<?= $frete->id_frete ?>)">
+                <p class="preto">ATIVO</p>
             </div>
 
             <div class="conteudo-caixa-consultar-frete-linha">
@@ -133,10 +133,10 @@
       <?php } ?>
 
       <?php if($frete->status == 2) { ?>
-        <div class="conteudo-caixa-consultar-frete"  onclick="ativar(<?= $frete->id_frete ?>)">
+        <div class="conteudo-caixa-consultar-frete">
             <div class="conteudo-caixa-consultar-status-frete">
-                <img class="icone" src="img/icons/status-inativo.svg">              
-                  <p class="laranja">INATIVO</p>
+                <img class="icone" src="img/icons/status-inativo.svg" onclick="ativar(<?= $frete->id_frete ?>)">
+                <p class="laranja" >INATIVO</p>
             </div>
 
             <div class="conteudo-caixa-consultar-frete-linha">
