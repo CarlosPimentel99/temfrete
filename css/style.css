@@ -604,3 +604,34 @@ h3{
     right: 35px;
     }
   }
+
+  .alert {
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 20px;
+    opacity: 1;
+    transition: opacity 0.6s;
+    margin-top: 1%;
+    margin-right: 30%;
+    margin-left: 30%;
+  }
+  
+  .alert.success {background-color: #00bf69;}
+  .alert.error {background-color: #FF8030;}
+  .alert.info {background-color: #2196F3;}
+  .alert.warning {background-color: #ff9800;}
+  
+  .closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .closebtn:hover {
+    color: black;
+  }
