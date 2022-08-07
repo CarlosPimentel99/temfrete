@@ -1,112 +1,124 @@
-<?php require_once "validador_acesso.php" ?>
-
-<?php
-  $acao = 'recuperar';
-  require 'motorista_controller.php';
-?>
-
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <title>Consulta de Cargas</title>
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/estilo.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-
-    <style>
-      .card-consultar-chamado {
-        padding: 30px 0 0 0;
-        width: 100%;
-        margin: 0 auto;
-      }
-    </style>
-  </head>
-
-  <script>
-    function remover(id) {
-        location.href = 'consultar_motorista.php?acao=remover&id='+id;
-      }
-
-    /*function inativar(id) {
-        location.href = 'consultar_motorista.php?acao=inativar&id='+id;
-      }
-
-    function ativar(id) {
-        location.href = 'consultar_motorista.php?acao=ativar&id='+id;
-      } */
-
-  </script>
-
-  <body>
-
-    <nav class="navbar navbar-dark bg-dark">
-      <a class="navbar-brand" href="home_adm.php">
-        <img src="img/temfrete.png" width="30" height="30" class="d-inline-block align-top" alt="">
-        Consulta de Motoristas
-      </a>
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="logoff.php">SAIR</a>
-        </li>
-      </ul>
-    </nav>
-
-    <?php if( isset($_GET['msg']) && $_GET['msg'] == 'sucesso' ) { ?>
-      <div class="bg-success pt-2 text-white d-flex justify-content-center">
-        <h5>Processo executado com Sucesso!!!</h5>
-      </div>
-    <?php } ?>
-
-    <?php if( isset($_GET['msg']) && $_GET['msg'] == 'erro' ) { ?>
-      <div class="bg-danger pt-2 text-white d-flex justify-content-center">
-        <h5>Problemas ao executar processo!!!</h5>
-      </div>
-    <?php } ?>
-    
-
-    <div class="container">    
-      <div class="row">
-
-        <div class="card-consultar-chamado">
-          <div class="card">
-            <div class="card-header">
-              Motoristas Cadastrados
-            </div>
-            
-            <div class="card-body">
-
-              <?php foreach($motorista as $user => $motorista) { ?>
-
-                <div class="card mb-3 bg-light">                  
-                  <div class="card-body">
-                    <h5 class="card-title" id="motorista_<?= $motorista->id ?>">Nome: <?= $motorista->nome?></h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Telefone: <?= $motorista->telefone ?></h6>
-                    <h6 class="card-subtitle mb-2 text-muted">CPF: <?= $motorista->cpf ?></h6>
-                    <h6 class="card-subtitle mb-2 text-muted">Placa: <?= $motorista->placa ?></h6>
-                    <h6 class="card-subtitle mb-2 text-muted">Tipo Motorista: <?= $motorista->tipoMotorista ?></h6
-                  </div>
-                  <div class="row mt-5">
-                      <div class="col-6">
-                        <a href="#" class="btn btn-lg btn-danger btn-block" onclick="remover(<?= $motorista->id ?>)"></i>Excluir</a>
-                      </div>
-                      <div class="col-6">
-                        <a href="editar_motorista.php?id=<?= $motorista->id ?>" class="btn btn-lg btn-info btn-block">Editar</a>
-                      </div>                        
-                    </div>
-                </div>
-              <?php } ?>
-
-              <div class="row mt-5">
-                <div class="col-6">
-                  <a class="btn btn-lg btn-warning btn-block" href="home_adm.php">Voltar</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </body>
+<?php require_once "validador_acesso.php" ?>
+<?php
+  $acao = 'recuperar';
+  require 'motorista_controller.php';
+?>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Consultar todos os fretes cadastradis">
+    <title>Área do Cliente - Motoristas Cadastrados</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="screen"/>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link rel="icon" type="image/x-icon" href="img/icons/favicon.svg">
+</head>
+
+<script>
+    function remover(id) {
+        location.href = 'consultar_motorista.php?acao=remover&id='+id;
+      }
+</script>
+
+<body class="logado-tela-fundo">
+<header class="cabecalho">
+        <div class="cabecalho-item-principal">
+        <a href="home_adm.php"><h1 class="branco">TEM FRETE</h1></a>
+        </div>
+        <nav class="cabecalho-menu">
+          <a class="cabecalho-item"  href="logoff.php"><button class="red"><img class="cabecalho-item-icone" alt="logout" src="img/icons/logout.svg">SAIR</button></a>
+        </nav>
+    </header>
+
+    <?php if( isset($_GET['msg']) && $_GET['msg'] == 'sucesso' ) { ?>
+      <div class="alert success branco">
+          <span class="closebtn">&times;</span>  
+          <strong>Sucesso!</strong> Processo executado perfeitamente!
+      </div>
+    <?php } ?>
+    <?php if( isset($_GET['msg']) && $_GET['msg'] == 'erro' ) { ?>
+      <div class="alert error branco">
+          <span class="closebtn">&times;</span>  
+          <strong>Erro!</strong> Problemas ao executar o processo!
+      </div>
+    <?php } ?>
+
+    <?php $contador = 0; ?>
+
+    <?php foreach($motorista as $user => $motorista) { ?>
+
+    <!-- verificar se contador é igual a zero -->
+    <?php if($contador == 0) { ?>
+      <section class="conteudo">
+    <?php } ?>
+
+        <div class="conteudo-caixa-consultar-motoristas">
+
+            <div class="conteudo-caixa-consultar-frete-linha">
+                <div class="conteudo-caixa-consultar-frete-imagem">
+                    <img class="icone" alt="Nome" src="img/icons/nome-motorista.svg">
+                    <p class="conteudo-caixa-consultar-frete-texto cinza">Nome</p>
+                </div>
+                <p class="conteudo-caixa-titulo preto" id="motorista_<?= $motorista->id ?>"><strong><?= $motorista->nome?></strong></p>
+            </div>
+
+            <div class="conteudo-caixa-consultar-frete-linha">
+                <div class="conteudo-caixa-consultar-frete-imagem">
+                    <img class="icone" alt="Nome" src="img/icons/telefone-motorista.svg">
+                    <p class="conteudo-caixa-consultar-frete-texto cinza">Telefone</p>
+                </div>
+                <p class="conteudo-caixa-titulo preto"><?= $motorista->telefone ?></p>
+            </div>
+
+            <div class="conteudo-caixa-consultar-frete-linha">
+                <div class="conteudo-caixa-consultar-frete-imagem">
+                    <img class="icone" alt="Tipo do caminhao" src="img/icons/cpf-motorista.svg">
+                    <p class="conteudo-caixa-consultar-frete-texto cinza">CPF</p>
+                </div>
+                <p class="conteudo-caixa-titulo preto"><?= $motorista->cpf ?></p>
+            </div>
+
+            <div class="conteudo-caixa-consultar-frete-linha">
+                <div class="conteudo-caixa-consultar-frete-imagem">
+                    <img class="icone" alt="Peso da carga" src="img/icons/tipo-caminhao.svg">
+                    <p class="conteudo-caixa-consultar-frete-texto cinza">Placa</p>
+                </div>
+                <p class="conteudo-caixa-titulo preto"><?= $motorista->placa ?></p>
+            </div>
+
+            <div class="conteudo-caixa-consultar-frete-linha">
+                <div class="conteudo-caixa-consultar-frete-imagem">
+                    <img class="icone" alt="Local da coleta" src="img/icons/tipo-motorista.svg">
+                    <p class="conteudo-caixa-consultar-frete-texto cinza">Tipo motorista</p>
+                </div>
+                <p class="conteudo-caixa-titulo preto"><?= $motorista->tipoMotorista ?></p>
+            </div>
+
+            <div class="login-formulario-barra">
+              <a onclick="remover(<?= $motorista->id ?>)">
+                <button class="botao-preto branco" type="button">
+                    <img class="icone" alt="excluir" src="img/icons/excluir.svg">
+                    EXCLUIR</button>
+              </a>
+              <a href="editar_motorista.php?id=<?= $motorista->id ?>">
+                <button class="botao-preto branco" type="button">
+                    <img class="icone" alt="editar" src="img/icons/editar.svg">
+                    EDITAR</button>
+              </a>
+            </div>
+        </div>
+      <?php if($contador == 1) { ?>
+        </section>        
+      <?php } ?>
+      
+      <?php $contador ++; ?>            
+
+      <?php if($contador == 2) { ?>        
+        <?php $contador =0; ?>            
+      <?php } ?>
+    <?php } ?>
+</body>
 </html>
