@@ -109,6 +109,14 @@
 
             <div class="conteudo-caixa-consultar-frete-linha">
                 <div class="conteudo-caixa-consultar-frete-imagem">
+                    <img class="icone" alt="Local da coleta" src="img/icons/interrogation.svg">
+                    <p class="conteudo-caixa-consultar-frete-texto cinza">Observação</p>
+                </div>
+                <p class="conteudo-caixa-titulo preto"><?= $frete->observacao?></p>
+            </div>
+
+            <div class="conteudo-caixa-consultar-frete-linha">
+                <div class="conteudo-caixa-consultar-frete-imagem">
                     <img class="icone" alt="Valor do frete" src="img/icons/valor-frete.svg">
                     <p class="conteudo-caixa-consultar-frete-texto cinza">Valor R$</p>
                 </div>

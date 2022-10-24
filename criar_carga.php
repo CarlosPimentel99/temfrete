@@ -72,6 +72,11 @@
             </div>
 
             <div class="login-formulario-barra">
+                <img class="icone" alt="Observação" src="img/icons/interrogation.svg">
+                <input class="login-conteudo-input cinza" type="text" placeholder="Observação do Frete" name="observacao">
+            </div>
+
+            <div class="login-formulario-barra">
                 <img class="icone" alt="Valor do frete" src="img/icons/valor-frete.svg">
                 <input class="login-conteudo-input cinza" type="text" placeholder="Valor do frete R$" name="valor" required>
             </div>
