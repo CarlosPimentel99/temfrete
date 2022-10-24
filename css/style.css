@@ -100,6 +100,8 @@ button.red{
     padding-left: 200px;
     padding-right: 200px;
     gap: 200px;
+    justify-content: center;
+    justify-items: center;
 }
 
 .conteudo-caixa{
